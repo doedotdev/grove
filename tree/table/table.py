@@ -34,10 +34,13 @@ class Table:
 
     def check_spacing(self, row):
         for idx, item in enumerate(row):
+            print(item)
             item_size = len(item)
+            print(item_size)
             if self.cell_spacing[idx] is None:
                 self.cell_spacing[idx] = item_size
             elif len(item) > self.cell_spacing[idx]:
+                print('here')
                 self.cell_spacing[idx] = item_size
 
     def set_headers(self, headers):
@@ -96,6 +99,7 @@ class Table:
             print()
 
     def print_table(self):
+        print(self.cell_spacing)
         if self.has_headers:
             self.print_formatter_line()
             self.print_headers()
@@ -141,10 +145,8 @@ class Table:
 # tableJustHeader.print_stats()
 
 
-# tableSetBoth = Table()
-# tableSetBoth.set_data([[1,2,3],[3,2,1],[4,6,'hello']])
-# tableSetBoth.set_headers(['one','two','threewertyui'])
-# tableSetBoth.set_headers(['hello'])
-# tableSetBoth.set_padding(6,4)
-# tableSetBoth.print_table()
-# tableSetBoth.print_stats()
+tableSetBoth = Table()
+tableSetBoth.set_data([[1,2,3],[3,2,1],[4,6,'hello']])
+tableSetBoth.set_headers(['one','two','t'])
+tableSetBoth.print_table()
+tableSetBoth.print_stats()

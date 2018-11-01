@@ -1,5 +1,7 @@
 from table.table import Table
 from tree.tree import Tree
+import sys
+print(sys.modules)
 
 print('hello')
 
