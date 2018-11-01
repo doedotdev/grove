@@ -1,5 +1,4 @@
 import sys
-from table import Table
 
 NODE_TYPE_ROOT = 'root'
 NODE_TYPE_LEFT = 'left'
